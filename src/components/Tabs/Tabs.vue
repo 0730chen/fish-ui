@@ -1,15 +1,17 @@
 <template>
     <div>标题</div>
-    <div v-for="p in panes">
+    <div v-for="p in panes" :ref="(el) => buttons[i] = el">
 <!--        <component :is=""></component>-->
-        <button @click="setTab(p)">{{p.title}}</button>
+        <div>
+            <button @click="setTab(p)">{{p.title}}</button>
+        </div>
     </div>
     <component :is="x"></component>
 </template>
 
 <script lang="ts">
     import Tabs from "../HelloWorld.vue";
-    import {ref} from 'vue'
+    import {ref, onMounted} from 'vue'
 
    type Props = {
        panes: any[]
@@ -26,8 +28,17 @@
             const setTab = (p:any)=>{
                 x.value = p.content
             }
-            console.log(props)
-            return {x,setTab}
+            const buttons = ref<HTMLElement[]>([])
+            //组件挂载
+            onMounted(()=>{
+                console.log(buttons)
+                // const button[index]:HTMLElement = buttons.value[0]
+                // console.log(button0);
+                // // button0
+                // const width = button0.getBoundingClientRect()
+                // console.log(width)
+            })
+            return {x,setTab,buttons}
         }
     }
 </script>
