@@ -1,16 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite"></HelloWorld>
-  <RouterView></RouterView>
+  <router-link to="/">首页</router-link>
+  <router-link to="/tabs">标签页</router-link>
+  <Layout></Layout>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Layout from './view/Layout/Layout.vue'
 
 export default {
-  name: 'App',
+  name: 'HomePage',
   components: {
-    HelloWorld
+    Layout
   }
 }
 </script>

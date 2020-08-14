@@ -8,11 +8,13 @@ var App_vue_1 = __importDefault(require("./App.vue"));
 require("./index.css");
 var vue_router_1 = require("vue-router");
 var HelloWorld_vue_1 = __importDefault(require("./components/HelloWorld.vue"));
+var TabsDemo_vue_1 = __importDefault(require("./components/Tabs/TabsDemo.vue"));
 var history = vue_router_1.createWebHistory();
 var router = vue_router_1.createRouter({
     history: history,
     routes: [
-        { path: '/', component: HelloWorld_vue_1.default }
+        { path: '/', component: HelloWorld_vue_1.default },
+        { path: '/tabs', component: TabsDemo_vue_1.default },
     ]
 });
 var app = vue_1.createApp(App_vue_1.default);
