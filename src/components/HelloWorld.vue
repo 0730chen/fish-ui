@@ -5,15 +5,16 @@
 </template>
 
 <script>
+  // 开始使用Composition API，我们首先需要一个可以实际使用它的地方。在Vue组件中，我们将此位置称为setup。
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   },
-  data() {
-    return {
-      count: 0
-    }
+  setup(props) {
+    console.log(props) ;// { user: '' }
+
+    return {} // anything returned here will be available for the rest of the component
   }
 }
 </script>
