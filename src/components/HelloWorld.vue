@@ -12,6 +12,15 @@ export default {
     msg: String
   },
   setup(props) {
+    import { ref } from 'vue'
+
+    const counter = ref(0)
+
+    console.log(counter) // { value: 0 }
+    console.log(counter.value) // 0
+
+    counter.value++
+    console.log(counter.value) // 1
     console.log(props) ;// { user: '' }
 
     return {} // anything returned here will be available for the rest of the component
