@@ -26,10 +26,10 @@ export default {
 
     const counter = ref(0)
     const repositories = ref([])
-    const reopsitories2 = toRefs([])
+    const ccc = toRefs([])
 
     console.log(repositories);
-    console.log(reopsitories2);
+    console.log(ccc);
     console.log(counter) // { value: 0 }
     console.log(counter.value) // 0
 
@@ -46,6 +46,9 @@ export default {
       console.log(newValue);
       console.log(oldValue);
       console.log('The new counter value is: ' + counter.value)
+    })
+    watch(ccc,(newValue,oldValue)=>{
+      console.log(newValue,oldValue);
     })
 
     return {
