@@ -19,6 +19,7 @@
   //watch,接受3个参数，一个无参考或getter函数，回调 ，可选配置选项
 
   //计算属性computed
+  // 在此，该computed函数返回对类似getter的回调的输出（作为的第一个参数传递）的只读 Reactive Referencecomputed。为了进入价值新创建的计算的变量，我们需要使用.value属性，就像用ref。
 export default {
   name: 'HelloWorld',
   props: {
