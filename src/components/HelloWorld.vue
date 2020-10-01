@@ -2,6 +2,8 @@
   <div>
     Hello World
   </div>
+  <div>我是内容{{counter}}</div>
+  <div>我是属性{{repositories}}</div>
 </template>
 
 <script>
@@ -26,9 +28,10 @@ export default {
   props: {
     msg: String
   },
-  setup(props) {
+  setup(props,content) {
 
     const counter = ref(0)
+    console.log(content);
     const repositories = ref([])
     const ccc = toRefs([])
 
