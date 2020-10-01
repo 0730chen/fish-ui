@@ -4,7 +4,7 @@
     <Tabs :panes="[
     {title:'标题一',content:Tabs1},
     {title:'标题二',content: Tabs2}
-    ]"></Tabs>
+    ]" ></Tabs>
 </template>
 <script>
     import Tabs from "./Tabs.vue";
@@ -14,6 +14,7 @@
         name:'TabsDemo',
         components: {Tabs},
         setup(){
+
             return {Tabs1,Tabs2}
         }
     }

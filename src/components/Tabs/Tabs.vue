@@ -3,16 +3,19 @@
     <div v-for="p in panes" :ref="(el) => buttons[i] = el">
 <!--        <component :is=""></component>-->
         <div>
-            <button @click="setTab(p)">{{p.title}}</button>
+            <button :class="p.title" @click="setTab(p)">{{p.title}}</button>
         </div>
     </div>
-    <component :is="x"></component>
+    <component :is="x">1111</component>
+    <component is="p">我是一个p标签</component>
+    <component is="button">按钮</component>
 </template>
 
 <script lang="ts">
     import Tabs from "../HelloWorld.vue";
     import {ref, onMounted} from 'vue'
 
+    //is用于指定组件的渲染
    type Props = {
        panes: any[]
     }
@@ -23,7 +26,7 @@
         },
         setup(props: Props){
             const x = ref(props.panes[0].content)
-            console.log(x)
+            console.log(x.value)
             console.log(props.panes);
             const setTab = (p:any)=>{
                 x.value = p.content

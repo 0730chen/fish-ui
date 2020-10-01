@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div class="small">
         Tab2
     </div>
 </template>

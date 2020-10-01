@@ -1,5 +1,5 @@
 <template>
-    <div>Tab1</div>
+    <div class="normal">Tab1</div>
 
 </template>
 
