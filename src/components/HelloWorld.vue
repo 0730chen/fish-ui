@@ -10,6 +10,7 @@
   import { ref,onMounted,watch,toRefs ,computed} from 'vue'
   // 开始使用Composition API，我们首先需要一个可以实际使用它的地方。在Vue组件中，我们将此位置称为setup。
   //setUp使用的值必须要return出去
+  //setuP的第一个参数式props
 
   //在setUp中添加生命周期
   //为了使Composition API与Option API相比功能更完整，我们还需要一种在内部注册生命周期挂钩的方法setup。由于Vue导出了几个新功能，因此这是可能的。Composition API上的生命周期挂钩与Options API的名称相同，但前缀为on：即mounted看起来像onMounted。
