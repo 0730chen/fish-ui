@@ -1,17 +1,17 @@
 <template>
     <div>
-        <Button>你好</Button>
-        <Button theme="link" size="large">你好</Button>
-        <Button theme="text">你好</Button>
+        <Buttons>你好</Buttons>
+        <Buttons theme="link" size="large">你好</Buttons>
+        <Buttons theme="text">你好</Buttons>
     </div>
 </template>
 
 <script lang="ts">
-    import Button from './Buttons.vue'
-
+    import {Buttons} from "../../lib/index";
+    console.log(Buttons);
     export default {
         name:'Demo',
-        components:{Button},
+        components:{Buttons},
         setup(){
         }
     }

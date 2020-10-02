@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var vue_1 = require("vue");
 exports.default = {
+    name: 'Buttons',
     props: {
         theme: {
             type: String,
@@ -26,12 +27,12 @@ exports.default = {
     },
 };
 var theme = props.theme, size = props.size, level = props.level;
-console.log(props, theme, size, level);
+//通过计算属性改变该组件的class
 exports.classes = vue_1.computed(function () {
     var _a;
     return _a = {},
-        _a["gulu-theme-" + theme] = theme,
-        _a["gulu-size-" + size] = size,
-        _a["gulu-level-" + level] = level,
+        _a["fish-theme-" + theme] = theme,
+        _a["fish-size-" + size] = size,
+        _a["fish-level-" + level] = level,
         _a;
 });

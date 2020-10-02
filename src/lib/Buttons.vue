@@ -17,6 +17,7 @@
         loading: boolean;
     }
     export default {
+        name:'Buttons',
         props: {
             theme: {
                 type: String,
