@@ -1,8 +1,10 @@
+<style src="./index.scss" scoped lang="scss"></style>
 <template>
     <div class="topnav">
 
         <router-link to="/">首页</router-link>
         <router-link to="/tabs">标签页</router-link>
+        <router-link to="/demo">Demo页</router-link>
         <router-link to="/" class="logo">
             <svg class="icon">
                 <use xlink:href="#icon-king"></use>
@@ -20,18 +22,27 @@
 </template>
 
 <script lang="ts">
-
-    import {
-        inject,
-        Ref
-    } from "vue";
+    import {inject, Ref} from "vue"
 
     export default {
         name: 'TopNav',
-        props: {},
+        props: {
+            toggleMenuButtonVisible: {
+                type: Boolean,
+                default: false
+            }
+        },
         setup() {
-
-        }
+            const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
+            const toggleMenu = () => {
+                if(menuVisible){
+                    menuVisible.value = !menuVisible.value;
+                }
+            };
+            return {
+                toggleMenu
+            };
+        },
     }
 </script>
 
