@@ -41,6 +41,7 @@
         },
     };
     const {theme, size, level} = props;
+    //通过计算属性改变该组件的class
     export const classes = computed(() => {
         return {
             [`fish-theme-${theme}`]: theme,
@@ -58,7 +59,7 @@
     $radius: 4px;
     $red: red;
     $grey: grey;
-    .gulu-button {
+    .fish-button {
         box-sizing: border-box;
         height: $h;
         padding: 0 12px;
@@ -92,7 +93,7 @@
             border: 0;
         }
 
-        &.gulu-theme-link {
+        &.fish-theme-link {
             border-color: transparent;
             box-shadow: none;
             color: $blue;
@@ -103,7 +104,7 @@
             }
         }
 
-        &.gulu-theme-text {
+        &.fish-theme-text {
             border-color: transparent;
             box-shadow: none;
             color: inherit;
@@ -114,20 +115,20 @@
             }
         }
 
-        &.gulu-size-big {
+        &.fish-size-big {
             font-size: 24px;
             height: 48px;
             padding: 0 16px;
         }
 
-        &.gulu-size-small {
+        &.fish-size-small {
             font-size: 12px;
             height: 20px;
             padding: 0 4px;
         }
 
-        &.gulu-theme-button {
-            &.gulu-level-main {
+        &.fish-theme-button {
+            &.fish-level-main {
                 background: $blue;
                 color: white;
                 border-color: $blue;
@@ -139,7 +140,7 @@
                 }
             }
 
-            &.gulu-level-danger {
+            &.fish-level-danger {
                 background: $red;
                 border-color: $red;
                 color: white;
@@ -152,8 +153,8 @@
             }
         }
 
-        &.gulu-theme-link {
-            &.gulu-level-danger {
+        &.fish-theme-link {
+            &.fish-level-danger {
                 color: $red;
 
                 &:hover,
@@ -163,8 +164,8 @@
             }
         }
 
-        &.gulu-theme-text {
-            &.gulu-level-main {
+        &.fish-theme-text {
+            &.fish-level-main {
                 color: $blue;
 
                 &:hover,
@@ -173,7 +174,7 @@
                 }
             }
 
-            &.gulu-level-danger {
+            &.fish-level-danger {
                 color: $red;
 
                 &:hover,
@@ -183,7 +184,7 @@
             }
         }
 
-        &.gulu-theme-button {
+        &.fish-theme-button {
             &[disabled] {
                 cursor: not-allowed;
                 color: $grey;
@@ -194,14 +195,14 @@
             }
         }
 
-        &.gulu-theme-link, &.gulu-theme-text {
+        &.fish-theme-link, &.fish-theme-text {
             &[disabled] {
                 cursor: not-allowed;
                 color: $grey;
             }
         }
 
-        > .gulu-loadingIndicator {
+        > .fish-loadingIndicator {
             width: 14px;
             height: 14px;
             display: inline-block;
@@ -210,11 +211,11 @@
             border-color: $blue $blue $blue transparent;
             border-style: solid;
             border-width: 2px;
-            animation: gulu-spin 1s infinite linear;
+            animation: fish-spin 1s infinite linear;
         }
     }
 
-    @keyframes gulu-spin {
+    @keyframes fish-spin {
         0% {
             transform: rotate(0deg)
         }
@@ -223,4 +224,3 @@
         }
     }
 </style>
-© 2020 GitHub, Inc.
