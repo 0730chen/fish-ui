@@ -12,7 +12,7 @@ exports.default = {
     },
     setup: function (props) {
         var x = vue_1.ref(props.panes[0].content);
-        console.log(x);
+        console.log(x.value);
         console.log(props.panes);
         var setTab = function (p) {
             x.value = p.content;

@@ -1,6 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-Tab1 < /div>
+/** @class */ (function () {
+    function class_1() {
+    }
+    return class_1;
+}());
+"normal" > Tab1 < /div>
     < /template>
     < script >
 ;
