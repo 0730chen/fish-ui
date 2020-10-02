@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var vue_1 = require("vue");
 exports.default = {
     props: {
         theme: {
@@ -25,7 +26,8 @@ exports.default = {
     },
 };
 var theme = props.theme, size = props.size, level = props.level;
-exports.classes = computed(function () {
+console.log(props, theme, size, level);
+exports.classes = vue_1.computed(function () {
     var _a;
     return _a = {},
         _a["gulu-theme-" + theme] = theme,
