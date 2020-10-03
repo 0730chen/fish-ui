@@ -1,24 +1,19 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var vue_1 = require("vue");
-var App_vue_1 = __importDefault(require("./App.vue"));
-require("./index.css");
-var vue_router_1 = require("vue-router");
-var HelloWorld_vue_1 = __importDefault(require("./components/HelloWorld.vue"));
-var TabsDemo_vue_1 = __importDefault(require("./components/Tabs/TabsDemo.vue"));
-var Demo_vue_1 = __importDefault(require("./components/Buttons/Demo.vue"));
-var history = vue_router_1.createWebHistory();
-var router = vue_router_1.createRouter({
+import { createApp } from 'vue';
+import App from './App.vue';
+import './index.css';
+import { createWebHistory, createRouter } from 'vue-router';
+import HelloWorld from './components/HelloWorld.vue';
+import TabsDemo from './components/Tabs/TabsDemo.vue';
+import Demo from "./components/Buttons/Demo.vue";
+const history = createWebHistory();
+const router = createRouter({
     history: history,
     routes: [
-        { path: '/', component: HelloWorld_vue_1.default },
-        { path: '/tabs', component: TabsDemo_vue_1.default },
-        { path: '/demo', component: Demo_vue_1.default }
+        { path: '/', component: HelloWorld },
+        { path: '/tabs', component: TabsDemo },
+        { path: '/demo', component: Demo }
     ]
 });
-var app = vue_1.createApp(App_vue_1.default);
+const app = createApp(App);
 app.use(router);
 app.mount('#app');

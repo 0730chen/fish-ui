@@ -1,13 +1,9 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var index_1 = __importDefault(require("../../lib/index"));
-console.log(Button);
-exports.default = {
+import { Buttons } from "../../lib/index";
+// import {Buttons} from "../../lib";
+console.log(Buttons);
+export default {
     name: 'Demo',
-    components: { Buttons: index_1.default },
-    setup: function () {
+    components: { Buttons },
+    setup() {
     }
 };

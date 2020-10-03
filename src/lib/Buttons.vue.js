@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var vue_1 = require("vue");
-exports.default = {
+import { computed } from "vue";
+export default {
     name: 'Buttons',
     props: {
         theme: {
@@ -26,13 +24,12 @@ exports.default = {
         }
     },
 };
-var theme = props.theme, size = props.size, level = props.level;
+const { theme, size, level } = props;
 //通过计算属性改变该组件的class
-exports.classes = vue_1.computed(function () {
-    var _a;
-    return _a = {},
-        _a["fish-theme-" + theme] = theme,
-        _a["fish-size-" + size] = size,
-        _a["fish-level-" + level] = level,
-        _a;
+export const classes = computed(() => {
+    return {
+        [`fish-theme-${theme}`]: theme,
+        [`fish-size-${size}`]: size,
+        [`fish-level-${level}`]: level,
+    };
 });
