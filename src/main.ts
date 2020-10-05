@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './index.css'
+import './index.scss'
 import {createWebHistory,createRouter} from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import TabsDemo from './components/Tabs/TabsDemo.vue'

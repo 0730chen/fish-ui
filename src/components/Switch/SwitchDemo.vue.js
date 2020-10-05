@@ -9,7 +9,9 @@ export default {
     setup() {
         const bool = ref(false);
         return {
-            bool
+            bool,
+            SwitchDemo1,
+            SwitchDemo2
         };
     }
 };
