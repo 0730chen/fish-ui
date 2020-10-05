@@ -17,6 +17,7 @@
         }
     }
     export const toggle = ()=>{
+        console.log('更新')
         context.emit("update:value",!props.value)
     }
 </script>

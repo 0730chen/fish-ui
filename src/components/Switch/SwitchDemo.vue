@@ -1,6 +1,7 @@
 <template>
     <h1>Switch组件示例</h1>
-    <Demo :component="SwitchDemo1"></Demo>
+    <Demo :component="
+SwitchDemo1"></Demo>
     <Demo :component="SwitchDemo2"></Demo>
 </template>
 
@@ -19,7 +20,9 @@
             const bool = ref(false)
 
             return {
-                bool
+                bool,
+                SwitchDemo1,
+                SwitchDemo2
             }
         }
     }
