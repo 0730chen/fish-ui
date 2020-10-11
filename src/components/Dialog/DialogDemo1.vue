@@ -1,10 +1,10 @@
 
-<demo>
+<Demo>
     常规使用
-</demo>
+</Demo>
 <template>
     <div>
-        <Button @click="toggle">打开对话框</Button>
+        <Buttons @click="toggle">打开对话框</Buttons>
         <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
             <template v-slot:content>
                 <strong>hi</strong>

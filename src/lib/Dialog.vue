@@ -13,8 +13,8 @@
                         <slot name="content" />
                     </main>
                     <footer>
-                        <Button level="main" @click="onClickOk">OK</Button>
-                        <Button @click="onClickCancel">Cancel</Button>
+                        <Buttons level="main" @click="onClickOk">OK</Buttons>
+                        <Buttons @click="onClickCancel">Cancel</Buttons>
                     </footer>
                 </div>
             </div>
@@ -24,7 +24,7 @@
 
 <script lang="ts" setup="props, context">
     import { SetupContext } from 'vue';
-    import Button from "./Button.vue";
+    import Buttons from "./Buttons.vue";
     declare const props: {
         visible: boolean;
         closeOnClickOverlay: boolean;
@@ -50,7 +50,7 @@
             }
         },
         components: {
-            Button,
+            Buttons,
         },
     };
     export const close = () => {
