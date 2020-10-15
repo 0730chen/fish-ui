@@ -1,9 +1,5 @@
 <template>
-  <div>
-    Hello World
-  </div>
-  <div>我是内容{{counter}}</div>
-  <div>我是属性{{repositories}}</div>
+<div class="container">首页内容</div>
 </template>
 
 <script>
@@ -71,3 +67,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .container{
+    margin-top: 64px;
+  }
+</style>
