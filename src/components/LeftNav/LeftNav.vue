@@ -21,5 +21,11 @@
 </script>
 
 <style lang="scss" scoped>
-
+.left-nav{
+    position: fixed;
+    left: 0;
+    top: 128px;
+    display: flex;
+    flex-direction: column;
+}
 </style>
