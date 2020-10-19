@@ -31,6 +31,10 @@
                 type:Boolean,
                 default:false
             },
+            effect:{
+                type:String,
+
+            }
 
         },
         setup(props){
