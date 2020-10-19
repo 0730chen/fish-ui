@@ -26,7 +26,12 @@
             type:{
                 type:'String',
                 default:'success'
-            }
+            },
+            closeable:{
+                type:Boolean,
+                default:false
+            },
+
         },
         setup(props){
             console.log(props);
