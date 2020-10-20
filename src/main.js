@@ -6,6 +6,7 @@ import HelloWorld from './components/HelloWorld.vue';
 import TabsDemo from './components/Tabs/TabsDemo.vue';
 import Demo from "./components/Buttons/Demo.vue";
 import SwitchDemo from "./components/Switch/SwitchDemo.vue";
+import Tag from "./components/Tag/TagDemo.vue";
 // import Dialog from "./components/Dialog/DialogDemo1.vue";
 const history = createWebHistory();
 const router = createRouter({
@@ -15,6 +16,8 @@ const router = createRouter({
         { path: '/tabs', component: TabsDemo },
         { path: '/demo', component: Demo },
         { path: '/switch', component: SwitchDemo },
+        { path: '/tag', component: Tag }
+        // {path:'/dialog',component: Dialog}
     ]
 });
 const app = createApp(App);

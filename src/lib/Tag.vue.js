@@ -1,4 +1,3 @@
-import { ref } from 'vue';
 export default {
     name: "Tag",
     props: {
@@ -24,10 +23,11 @@ export default {
     },
     setup(props) {
         console.log(props);
-        let s = ref(1);
-        console.log(s);
-        return {
-            s
-        };
+        // let s = ref(1)
+        // console.log(s);
+        //
+        // return {
+        //     s
+        // }
     }
 };

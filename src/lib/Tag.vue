@@ -1,7 +1,8 @@
 <template>
-    <div class="fish-ui-tag">
-        <slot></slot>
-    </div>
+    <slot/>
+<!--    <div class="fish-ui-tag">-->
+<!--        <slot></slot>-->
+<!--    </div>-->
 </template>
 
 <script lang="ts">
@@ -24,7 +25,7 @@
                 default:'1ABE96',
             },
             type:{
-                type:'String',
+                type:String,
                 default:'success'
             },
             closeable:{
@@ -33,18 +34,18 @@
             },
             effect:{
                 type:String,
-
+                default:'light'
             }
 
         },
         setup(props){
             console.log(props);
-            let s = ref(1)
-            console.log(s);
-
-            return {
-                s
-            }
+            // let s = ref(1)
+            // console.log(s);
+            //
+            // return {
+            //     s
+            // }
         }
     }
 </script>
