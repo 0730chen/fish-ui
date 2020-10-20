@@ -13,6 +13,13 @@ export default {
         type: {
             type: 'String',
             default: 'success'
+        },
+        closeable: {
+            type: Boolean,
+            default: false
+        },
+        effect: {
+            type: String,
         }
     },
     setup(props) {

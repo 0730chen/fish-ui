@@ -53,8 +53,14 @@
     $success:#1ABE96;
     $warn:#BC1A42;
     $info:#38879B;
-    .fish-ui-tag{
 
+    .fish-ui-tag{
+        &-success{
+            background-color: $success;
+        }
+        &-info{
+            background: $info;
+        }
     }
 
 </style>
