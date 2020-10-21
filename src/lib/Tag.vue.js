@@ -10,7 +10,7 @@ export default {
             default: '1ABE96',
         },
         type: {
-            type: 'String',
+            type: String,
             default: 'success'
         },
         closeable: {
@@ -19,10 +19,12 @@ export default {
         },
         effect: {
             type: String,
+            default: 'light'
         }
     },
-    setup(props) {
-        console.log(props);
+    setup(props, context) {
+        console.log(props, context);
+        console.log(Object.entries(props));
         // let s = ref(1)
         // console.log(s);
         //

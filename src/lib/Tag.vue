@@ -1,5 +1,5 @@
 <template>
-    <div class="fish-tag"  >
+    <div :class="['fish-tag',`fish-tag-${size}`,`fish-tag-${color}`,`fish-tag-${type}`]"  >
         <slot/>
     </div>
 <!--    <div class="fish-ui-tag">-->
