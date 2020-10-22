@@ -1,5 +1,5 @@
 <template>
-    <div :class="['fish-tag',`fish-tag-${size}`,`fish-tag-${color}`,`fish-tag-${type}`]"  >
+    <div :class="['fish-ui-tag',`fish-tag-${size}`,`fish-tag-${type}`]" :style="{color:color}" >
         <slot/>
     </div>
 <!--    <div class="fish-ui-tag">-->
@@ -24,7 +24,7 @@
             },
             color:{
                 type:String,
-                default:'1ABE96',
+                default:'#1ABE96',
             },
             type:{
                 type:String,
@@ -59,6 +59,17 @@
     $info:#38879B;
 
     .fish-ui-tag{
+        background-color: #ecf5ff;
+        display: inline-block;
+        height: 32px;
+        padding: 0 10px;
+        line-height: 30px;
+        font-size: 12px;
+        color: #409eff;
+        border: 1px solid #d9ecff;
+        border-radius: 4px;
+        box-sizing: border-box;
+        white-space: nowrap;
         &-success{
             background-color: $success;
         }
