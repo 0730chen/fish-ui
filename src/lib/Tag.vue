@@ -18,6 +18,7 @@
     export default  {
         name: "Tag",
         props:{
+
             size:{
                 type:String,
                 default:'normal'
@@ -84,6 +85,15 @@
             background-color: #f4f4f5;
             border-color: #e9e9eb;
             color: #909399;
+        }
+        &-medium{
+            height: 28px;
+            line-height: 26px;
+        }
+        &-small{
+            height: 24px;
+            padding: 0 8px;
+            line-height: 22px;
         }
     }
 
