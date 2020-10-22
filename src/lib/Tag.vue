@@ -1,5 +1,5 @@
 <template>
-    <div :class="['fish-ui-tag',`fish-tag-${size}`,`fish-tag-${type}`]" :style="{color:color}" >
+    <div :class="['fish-ui-tag',`fish-ui-tag-${size}`,`fish-ui-tag-${type}`]" :style="{color:color}" >
         <slot/>
     </div>
 <!--    <div class="fish-ui-tag">-->
@@ -28,7 +28,7 @@
             },
             type:{
                 type:String,
-                default:'success'
+                default:''
             },
             closeable:{
                 type:Boolean,
@@ -71,10 +71,19 @@
         box-sizing: border-box;
         white-space: nowrap;
         &-success{
-            background-color: $success;
+        }
+        &-waring{
+            background-color: #fdf6ec;
+            border-color: #faecd8;
+            color: $warn
+        }
+        &-danger{
+            color: red;
         }
         &-info{
-            background: $info;
+            background-color: #f4f4f5;
+            border-color: #e9e9eb;
+            color: #909399;
         }
     }
 
