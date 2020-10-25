@@ -24,7 +24,7 @@ h6 {
   font-weight: normal;
 }
 
-body {
+html body {
   font-size: 16px;
   // 答案见 https://github.com/zenozeng/fonts.css/
   line-height: 1.5;
@@ -34,10 +34,17 @@ body {
   "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
   "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
   SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  width: 100%;
+  height: 100%;
 }
 .icon {
   width: 1em; height: 1em;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
+}
+
+#app{
+  width: 100%;
+  height: 100%;
 }

@@ -7,11 +7,11 @@ export default {
         },
         color: {
             type: String,
-            default: '1ABE96',
+            default: '#1ABE96',
         },
         type: {
             type: String,
-            default: 'success'
+            default: ''
         },
         closeable: {
             type: Boolean,

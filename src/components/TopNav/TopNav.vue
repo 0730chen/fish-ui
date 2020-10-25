@@ -3,23 +3,14 @@
     <div class="topnav">
 
         <router-link to="/">首页</router-link>
-        <router-link to="/tabs">标签页</router-link>
-        <router-link to="/demo">Demo页</router-link>
-        <router-link to="/switch">Switch组件</router-link>
-        <router-link to="/dialog">Dialog组件</router-link>
+        <router-link to="/tabs">主题</router-link>
+        <router-link to="/demo">组件</router-link>
+        <router-link to="/switch">相关资源</router-link>
         <router-link to="/" class="logo">
             <svg class="icon">
                 <use xlink:href="#icon-king"></use>
             </svg>
         </router-link>
-        <ul class="menu">
-            <li>
-                <router-link to="/doc">文档</router-link>
-            </li>
-        </ul>
-        <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleMenu">
-            <use xlink:href="#icon-menu"></use>
-        </svg>
     </div>
 </template>
 
