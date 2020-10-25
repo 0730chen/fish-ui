@@ -21,7 +21,4 @@
     }
 </script>
 
-<style lang="scss" scoped>
-.left-nav{
-}
-</style>
+<style lang="scss"  src="./index.scss" scoped></style>

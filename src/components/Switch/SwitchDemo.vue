@@ -1,8 +1,10 @@
-<template>
-    <h1>Switch组件示例</h1>
-    <Demo :component="
+<template >
+    <div class="fish-ui-switch">
+        <h1>Switch组件示例</h1>
+        <Demo :component="
 SwitchDemo1"></Demo>
-    <Demo :component="SwitchDemo2"></Demo>
+        <Demo :component="SwitchDemo2"></Demo>
+    </div>
 </template>
 
 <script lang="ts">
@@ -29,5 +31,8 @@ SwitchDemo1"></Demo>
 </script>
 
 <style lang="scss" scoped>
-
+.fish-ui-switch{
+    display: flex;
+    flex-direction: column;
+}
 </style>
