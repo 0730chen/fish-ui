@@ -1,8 +1,18 @@
 .left-nav{
-  padding-top: 56px;
   display: flex;
   flex-direction: column;
   width: 240px;
   margin-top: 80px;
   transition: padding-top .3s;
+  > a{
+    display: block;
+    height: 40px;
+    color: #444;
+    line-height: 40px;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 400;
+  }
 }
