@@ -6,7 +6,9 @@
         <router-link to="/demo">Demo页</router-link>
         <router-link to="/switch">Switch组件</router-link>
         <router-link to="/dialog">Dialog组件</router-link>
-        <router-link to="/tag">标签组件</router-link>
+        <router-link to="/tag">Tags组件</router-link>
+        <router-link to="/checkbox">CheckBox组件</router-link>
+
         <router-link to="/" class="logo">
             <svg class="icon">
                 <use xlink:href="#icon-king"></use>

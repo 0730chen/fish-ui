@@ -1,6 +1,9 @@
 <template>
     <div :class="classes">
-        <slot></slot>
+        <label>
+            <input type="checkbox" :disabled="disabled" >
+        </label>
+        <span class="fish-ui-checkbox-label">{{label}}</span>
     </div>
 </template>
 
@@ -11,8 +14,12 @@
         theme?: 'button' | 'text' | 'link';
         size?: 'normal' | 'big' | 'small';
         level?: 'normal' | 'main' | 'danger';
-        disabled: boolean;
+        disabled:{
+            type:Boolean,
+            default:false
+        };
         loading: boolean;
+        label:String
     }
     export default {
         name: "Checkbox",
@@ -39,24 +46,23 @@
             }
         },
         setup(props){
-
-            const classes = computed(()=>{
-                return {
-                    [`fish-ui-${props.theme}`]:props.theme,
-                    [`fish-ui-${props.size}`]:props.size,
-                    [`fish-ui-${props.level}`]:props.level,
-                    [`fish-ui-${props.disabled}`]:props.disabled,
-
-                }
-            })
-
-            return{
-                classes
-            }
+            console.log(props);
         }
     }
+    const {theme, size, level,disabled} = props;
+    export const classes = computed(()=>{
+        return {
+            [`fish-ui-${theme}`]:theme,
+            [`fish-ui-${disabled}`]:disabled,
+        }
+    })
+    console.log(classes)
 </script>
 
 <style lang="scss" scoped>
-
+.fish-ui-checkbox{
+    &-label{
+        padding-left: 8px;
+    }
+}
 </style>

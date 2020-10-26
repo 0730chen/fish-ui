@@ -1,3 +1,5 @@
+import { CheckBox } from "../../lib/index";
 export default {
-    name: "CheckBoxDemo"
+    name: "CheckBoxDemo",
+    components: { CheckBox }
 };

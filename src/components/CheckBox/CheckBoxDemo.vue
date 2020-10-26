@@ -1,6 +1,7 @@
 <template>
     <div >
-        <CheckBox></CheckBox>
+        <CheckBox label="复选" theme="black"></CheckBox>
+        <CheckBox label="禁用" disabled></CheckBox>
     </div>
 </template>
 
