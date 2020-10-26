@@ -1,6 +1,6 @@
 <template>
     <div :class="classes">
-        Checkbox
+        <slot></slot>
     </div>
 </template>
 
