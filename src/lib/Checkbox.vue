@@ -42,7 +42,11 @@
 
             const classes = computed(()=>{
                 return {
-                    [`fish-ui-${props.theme}`]:props.theme
+                    [`fish-ui-${props.theme}`]:props.theme,
+                    [`fish-ui-${props.size}`]:props.size,
+                    [`fish-ui-${props.level}`]:props.level,
+                    [`fish-ui-${props.disabled}`]:props.disabled,
+
                 }
             })
 
