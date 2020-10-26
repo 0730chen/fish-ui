@@ -48,6 +48,7 @@
             [`fish-theme-${theme}`]: theme,
             [`fish-size-${size}`]: size,
             [`fish-level-${level}`]: level,
+
         };
     });
 </script>
