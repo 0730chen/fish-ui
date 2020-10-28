@@ -25,7 +25,8 @@
 
 <style lang="scss">
     .tag-demo {
-        padding: 24px;
+        padding: 80px 24px 24px 24px;
+
         .fish-ui-tag + .fish-ui-tag{
             margin-left: 16px;
         }

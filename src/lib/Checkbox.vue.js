@@ -24,16 +24,15 @@ export default {
         }
     },
     setup(props) {
-        const classes = computed(() => {
-            return {
-                [`fish-ui-${props.theme}`]: props.theme,
-                [`fish-ui-${props.size}`]: props.size,
-                [`fish-ui-${props.level}`]: props.level,
-                [`fish-ui-${props.disabled}`]: props.disabled,
-            };
-        });
-        return {
-            classes
-        };
+        console.log(props);
     }
 };
+const { theme, size, level, disabled } = props;
+console.log(disabled);
+export const classes = computed(() => {
+    return {
+        [`fish-ui-checkbox`]: 'fish-ui-checkbox',
+        [`fish-ui-checkbox-disable`]: disabled ? 'ban' : ''
+    };
+});
+console.log(classes);
