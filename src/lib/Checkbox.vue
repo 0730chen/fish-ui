@@ -1,7 +1,7 @@
 <template>
     <div :class="classes">
         <label class="fish-ui-checkbox-input">
-            <input type="checkbox" :disabled="disabled" >
+            <input type="checkbox" :disabled="disabled" :style="style" @change="inputChange" >
         </label>
         <span class="fish-ui-checkbox-label">{{label}}</span>
     </div>
@@ -16,7 +16,8 @@
         level?: 'normal' | 'main' | 'danger';
         disabled:boolean;
         loading: boolean;
-        label:string
+        label:string,
+        color:string,
     }
     export default {
         name: "Checkbox",
@@ -40,13 +41,17 @@
             loading: {
                 type: Boolean,
                 default: false
+            },
+            color:{
+                type:String,
+                default:'red'
             }
         },
         setup(props){
             console.log(props);
         }
     }
-    const {theme, size, level,disabled} = props;
+    const {theme, size, level,disabled,color} = props;
     console.log(disabled);
     export const classes = computed(()=>{
         return {
@@ -54,7 +59,15 @@
             [`fish-ui-checkbox-disable`]: disabled ? 'ban':''
         }
     })
-    console.log(classes)
+    export const style = computed(()=>{
+        return{
+            color:color
+        }
+    })
+    export const inputChange = (e)=>{
+        console.log(e);
+    }
+    console.log(classes,style)
 </script>
 
 <style lang="scss" scoped>
