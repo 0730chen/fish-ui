@@ -54,11 +54,10 @@
     const {theme, size, level,disabled,color} = props;
     console.log(disabled);
     export const classes = computed(()=>{
+        console.log(inputChange);
         return {
-            active:inputChange?'is-check':'',
-            [`fish-ui-checkbox`]:'1111',
-            [`is-checked`]:inputChange?'is-checked':'',
-            [`fish-ui-checkbox-disable`]: disabled ? 'ban':''
+            'fish-ui-checkbox':true,
+            'fish-ui-checkbox-disable':false
         }
     })
     export const style = computed(()=>{
@@ -67,8 +66,11 @@
         }
     })
     export const inputChange = (e)=>{
-        console.log(e.target.checked);
-        return e.target.checked
+        console.log(classes)
+        let disable = e.target.checked
+        console.log(disable);
+        classes.value['is-checked'] = disable
+        console.log(classes);
     }
     console.log(classes,style)
 </script>
