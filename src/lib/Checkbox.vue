@@ -7,8 +7,9 @@
     </div>
 </template>
 
-<script lang="ts" setup="props">
-    import {computed} from "vue";
+<script lang="ts">
+    import {computed,ref} from "vue";
+    import {latestVersionsMap} from "vite/dist/node/server/serverPluginHmr";
 
     declare const props: {
         theme?: 'button' | 'text' | 'link';
@@ -19,6 +20,8 @@
         label:string,
         color:string,
     }
+
+
     export default {
         name: "Checkbox",
         props: {
@@ -47,38 +50,54 @@
                 default:'red'
             }
         },
-        setup(props){
+        setup(props,content){
+            console.log(props,content);
+            const {theme, size, level,disabled,color,label} = props;
+            console.log(disabled,color,label);
+            const classes = computed(()=>{
+
+                console.log(inputChange);
+                return {
+                    'fish-ui-checkbox':true,
+                    'fish-ui-checkbox-disable':false,
+                    'is-checked':false
+                }
+            })
+
+           function  inputChange(e){
+                     let disable = e.target.checked
+                     console.log(disable);
+                     classes.value['is-checked'] = disable
+                     console.log(classes);
+                 }
             let status = ref(false)
             console.log(props);
-            status.value = false
-            return {status}
+            return {status,classes}
         }
     }
-    console.log(status.valueOf());
-    const {theme, size, level,disabled,color} = props;
-    console.log(disabled);
-    export const classes = computed(()=>{
-
-        console.log(inputChange);
-        return {
-            'fish-ui-checkbox':true,
-            'fish-ui-checkbox-disable':false,
-            'is-checked':false
-        }
-    })
-    export const style = computed(()=>{
-        return{
-            color:color
-        }
-    })
-    export const inputChange = (e)=>{
-        console.log(classes)
-        let disable = e.target.checked
-        console.log(disable);
-        classes.value['is-checked'] = disable
-        console.log(classes);
-    }
-    console.log(classes,style)
+    // console.log(status.valueOf());
+    // const {theme, size, level,disabled,color} = props;
+    // console.log(disabled);
+    // export const classes = computed(()=>{
+    //
+    //     console.log(inputChange);
+    //     return {
+    //         'fish-ui-checkbox':true,
+    //         'fish-ui-checkbox-disable':false,
+    //         'is-checked':false
+    //     }
+    // })
+    // export const style = computed(()=>{
+    //     return{
+    //         color:color
+    //     }
+    // })
+    // export const inputChange = (e)=>{
+    //     let disable = e.target.checked
+    //     console.log(disable);
+    //     classes.value['is-checked'] = disable
+    //     console.log(classes);
+    // }
 </script>
 
 <style lang="scss" scoped>
