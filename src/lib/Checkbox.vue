@@ -48,16 +48,22 @@
             }
         },
         setup(props){
+            let status = ref(false)
             console.log(props);
+            status.value = false
+            return {status}
         }
     }
+    console.log(status.valueOf());
     const {theme, size, level,disabled,color} = props;
     console.log(disabled);
     export const classes = computed(()=>{
+
         console.log(inputChange);
         return {
             'fish-ui-checkbox':true,
-            'fish-ui-checkbox-disable':false
+            'fish-ui-checkbox-disable':false,
+            'is-checked':false
         }
     })
     export const style = computed(()=>{
