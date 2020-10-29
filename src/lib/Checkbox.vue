@@ -55,7 +55,9 @@
     console.log(disabled);
     export const classes = computed(()=>{
         return {
-            [`fish-ui-checkbox`]:'fish-ui-checkbox',
+            active:inputChange?'is-check':'',
+            [`fish-ui-checkbox`]:'1111',
+            [`is-checked`]:inputChange?'is-checked':'',
             [`fish-ui-checkbox-disable`]: disabled ? 'ban':''
         }
     })
@@ -65,7 +67,8 @@
         }
     })
     export const inputChange = (e)=>{
-        console.log(e);
+        console.log(e.target.checked);
+        return e.target.checked
     }
     console.log(classes,style)
 </script>

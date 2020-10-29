@@ -21,13 +21,17 @@ export default {
         loading: {
             type: Boolean,
             default: false
+        },
+        color: {
+            type: String,
+            default: 'red'
         }
     },
     setup(props) {
         console.log(props);
     }
 };
-const { theme, size, level, disabled } = props;
+const { theme, size, level, disabled, color } = props;
 console.log(disabled);
 export const classes = computed(() => {
     return {
@@ -35,4 +39,12 @@ export const classes = computed(() => {
         [`fish-ui-checkbox-disable`]: disabled ? 'ban' : ''
     };
 });
-console.log(classes);
+export const style = computed(() => {
+    return {
+        color: color
+    };
+});
+export const inputChange = (e) => {
+    console.log(e);
+};
+console.log(classes, style);
