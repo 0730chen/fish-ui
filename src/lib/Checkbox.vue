@@ -48,7 +48,8 @@
             color:{
                 type:String,
                 default:'red'
-            }
+            },
+            label:String
         },
         setup(props,content){
             console.log(props,content);
