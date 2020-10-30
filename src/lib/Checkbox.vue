@@ -19,6 +19,7 @@
         loading: boolean;
         label: string,
         color: string,
+        border:false,
     }
 
 
@@ -49,11 +50,15 @@
                 type: String,
                 default: 'red'
             },
-            label: String
+            label: String,
+            border:{
+                type:Boolean,
+                default:false
+            }
         },
         setup(props, content) {
             console.log(props, content);
-            const {theme, size, level, disabled, color, label} = props;
+            const {theme, size, level, disabled, color, label,border} = props;
             console.log(disabled, color, label);
             let isChecked = ref(false)
             const classes = computed(() => {
@@ -62,7 +67,8 @@
                 return {
                     'fish-ui-checkbox': true,
                     'fish-ui-checkbox-disable': false,
-                    'is-checked':isChecked.value
+                    'is-checked':isChecked.value,
+                    'is-border':border
                 }
             })
 
@@ -115,7 +121,18 @@
             color: #c0c4cc;
             cursor: not-allowed;
         }
-    }
+        &.is-border{
+            padding: 9px 20px 9px 10px;
+            border-radius: 4px;
+            border: 1px solid #dcdfe6;
+            box-sizing: border-box;
+            line-height: normal;
+            max-height: 40px;
+        }
+        &.is-border.is-checked{
+            border-color: #409eff;
+        }
+        }
 
     .is-checked{
         color: #409eff;
