@@ -5,7 +5,7 @@
         <CheckBox label="边框选择"  border></CheckBox>
         <CheckBox label="另一种颜色"  border > </CheckBox>
         <CheckBox label="大边框"  border > </CheckBox>
-
+        <CheckBox label="色彩"  border > </CheckBox>
     </div>
 </template>
 
