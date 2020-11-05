@@ -1,7 +1,7 @@
 <template>
-    <div :class="classes">
+    <div :class="classes" @click.stop="inputChange">
         <label class="fish-ui-checkbox-input">
-            <input type="checkbox" :disabled="disabled" :style="style" @change="inputChange">
+            <input type="checkbox" :disabled="disabled" :style="style">
         </label>
         <span class="fish-ui-checkbox-label">{{label}}</span>
     </div>
@@ -61,9 +61,8 @@
             const {theme, size, level, disabled, color, label,border} = props;
             console.log(disabled, color, label);
             let isChecked = ref(false)
-            const classes = computed(() => {
 
-                console.log(inputChange);
+            const classes = computed(() => {
                 return {
                     'fish-ui-checkbox': true,
                     'fish-ui-checkbox-disable': false,
@@ -73,7 +72,8 @@
             })
 
             function inputChange(e) {
-                console.log(isChecked.value);
+              console.log(isChecked);
+              console.log(isChecked.value,e);
                 isChecked.value  = e.target.checked
                 console.log(isChecked.value);
                 classes.value["is-checked"] = e.target.checked
