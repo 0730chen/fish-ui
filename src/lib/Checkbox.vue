@@ -1,7 +1,7 @@
 <template>
     <div :class="classes" @click.stop="inputChange">
         <label class="fish-ui-checkbox-input">
-            <input type="checkbox" :disabled="disabled" :style="style">
+            <input type="checkbox" :disabled="disabled" :style="style" :checked=" isChecked">
         </label>
         <span class="fish-ui-checkbox-label">{{label}}</span>
     </div>
@@ -21,8 +21,6 @@
         color: string,
         border:false,
     }
-
-
     export default {
         name: "Checkbox",
         props: {
@@ -72,11 +70,11 @@
             })
 
             function inputChange(e) {
-              console.log(isChecked);
-              console.log(isChecked.value,e);
-                isChecked.value  = e.target.checked
-                console.log(isChecked.value);
-                classes.value["is-checked"] = e.target.checked
+              console.log(isChecked.value);
+
+                classes.value["is-checked"] = true
+              isChecked.value = !isChecked.value
+              console.log(classes)
             }
 
             let status = ref(false)
