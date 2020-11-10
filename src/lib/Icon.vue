@@ -1,7 +1,7 @@
 <template>
     <div @click="$emit('click',$event)" :class="classes">
-        <svg class="icon">
-            <use :xlink:href="'#'+IconName"></use>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="fish-ui-auto"></use>
         </svg>
     </div>
 </template>

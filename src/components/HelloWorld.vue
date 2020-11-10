@@ -1,5 +1,9 @@
 <template>
 <div class="container">首页内容</div>
+
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#auto"></use>
+    </svg>
 </template>
 
 <script>
