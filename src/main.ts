@@ -10,6 +10,7 @@ import Tag from "./components/Tag/TagDemo.vue";
 import CheckBoxDemo from "./components/CheckBox/CheckBoxDemo.vue";
 import IconDemo from "./components/IconDemo/IconDemo.vue";
 import SelectDemo from "./components/SelectDemo/SelectDemo.vue";
+import InputDemo from "./components/InputDemo/InputDemo.vue";
 // import Dialog from "./components/Dialog/DialogDemo1.vue";
 
 const history = createWebHistory()
@@ -23,7 +24,8 @@ const router = createRouter({
         {path:'/tag',component: Tag},
         {path:'/checkbox',component: CheckBoxDemo},
         {path:'/icon',component: IconDemo},
-        {path:'/select',component: SelectDemo}
+        {path:'/select',component: SelectDemo},
+        {path:'/input',component: InputDemo}
         // {path:'/dialog',component: Dialog}
         ]
 })

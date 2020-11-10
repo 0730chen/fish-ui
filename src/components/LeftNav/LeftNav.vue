@@ -9,6 +9,7 @@
         <router-link to="/tag">Tags组件</router-link>
         <router-link to="/checkbox">CheckBox组件</router-link>
         <router-link to="/select">Select组件</router-link>
+        <router-link to="/input">Input组件</router-link>
 
         <router-link to="/" class="logo">
             <svg class="icon">
