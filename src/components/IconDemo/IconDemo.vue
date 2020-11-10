@@ -1,12 +1,15 @@
 <template>
-    <div>
-        IconDemo
-    </div>
+    <Icon name="wexin"></Icon>
 </template>
 
 <script lang="ts">
+    import {Icon} from '../../lib/index'
   export default {
-    name: "IconDemo"
+    name: "IconDemo",
+    component:{Icon},
+    setup(props){
+      console.log(props)
+    }
   }
 </script>
 

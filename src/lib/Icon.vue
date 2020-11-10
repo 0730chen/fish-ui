@@ -9,15 +9,19 @@
 
 <script lang="ts">
     import {computed} from 'vue'
-  declare const props: {
-    name:string,
-    class:string
-  }
+    console.log(11111)
 
   export default {
     name: 'Icon',
+    props:{
+      name:{
+        type:String,
+        default:''
+      }
+    },
     setup(props){
       console.log(props)
+      console.log(1111)
       let  classes = computed(()=>{
         return {
           'fish-ui-icon':true

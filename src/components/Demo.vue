@@ -24,7 +24,6 @@ import {computed,ref} from 'vue'
 
 const  Prism = (window as any).Prism
 
-console.log(Prism);
 export default  {
         name: "Demo",
         components:{

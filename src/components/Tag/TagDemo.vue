@@ -13,8 +13,6 @@
 <script lang="ts">
     import {ref} from 'vue'
     import {Tag} from "../../lib/index";
-
-    console.log(Tag);
     export default {
         name: "TagDemo",
         components: {
