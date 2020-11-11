@@ -6,5 +6,5 @@ export { default as Dialog } from './Dialog.vue';
 export { default as Tag } from './Tag.vue';
 export { default as CheckBox } from './Checkbox.vue';
 export { default as Select } from './Select.vue';
-export { default as Icon } from './Icon.vue';
+export { default as FishIcon } from './Icon.vue';
 export { default as Input } from './Input.vue';

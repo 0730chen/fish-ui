@@ -1,16 +1,18 @@
 <template>
-    111
-    <Icon name="wexin"></Icon>
+    <IconUi name="xxxx"></IconUi>
+    <FishIcon>xxxx</FishIcon>
     <svg class="icon" aria-hidden="true">
-        <use xlink:href="fish-ui-auto"></use>
+        <use xlink:href="#auto"></use>
     </svg>
 </template>
 
 <script lang="ts">
-    import {Icon} from '../../lib/index'
-  export default {
+    import {FishIcon} from '../../lib/index'
+
+    console.log(FishIcon);
+    export default {
     name: "IconDemo",
-    component:{Icon},
+    component:{FishIcon},
     setup(props){
       console.log(props)
     }
@@ -18,5 +20,6 @@
 </script>
 
 <style lang="scss" scoped>
+
 
 </style>

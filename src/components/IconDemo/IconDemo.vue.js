@@ -1,3 +1,8 @@
+import { IconUi } from '../../lib/index';
 export default {
-    name: "IconDemo"
+    name: "IconDemo",
+    component: { IconUi },
+    setup(props) {
+        console.log(props);
+    }
 };

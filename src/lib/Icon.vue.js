@@ -1,34 +1,20 @@
-;
-"$emit('click',$event)";
-class {
-}
-"classes" >
-    class {
-    };
-"icon" >
-;
-xlink: href = "'#'+IconName" > /use>
-    < /svg>
-    < /div>
-    < /template>
-    < script;
-lang = "ts" >
-;
-import { computed } from 'vue';
+console.log(11111);
 export default {
-    name: 'Icon',
-    setup(props) {
-        console.log(props);
-        let classes = computed(() => {
-            return {
-                'fish-ui-icon': true
-            };
-        });
-        return { classes };
+    name: 'FishIcon',
+    props: {
+        name: {
+            type: String,
+            default: ''
+        }
+    },
+    setup(props, context) {
+        console.log(props, context);
+        console.log(Object.entries(props));
+        // let s = ref(1)
+        // console.log(s);
+        //
+        // return {
+        //     s
+        // }
     }
-}
-    < /script>
-    < style;
-lang = "scss";
-scoped >
-    /style>;
+};
