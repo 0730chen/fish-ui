@@ -6,7 +6,6 @@
 
 <script lang="ts">
 
-    @Component
     export default  {
         name: "Radio"
     }
