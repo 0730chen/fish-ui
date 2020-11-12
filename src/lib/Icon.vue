@@ -1,13 +1,10 @@
 <template>
-    11111
-    <div>1111</div>
     <div @click="$emit('click',$event)" class="fish-ui-icon">
         {{name}}
         <svg class="icon" aria-hidden="true">
-            <use xlink:href="fish-ui-auto"></use>
+            <use :xlink:href=`#${name}`></use>
         </svg>
     </div>
-    <slot></slot>
 </template>
 
 
@@ -22,12 +19,11 @@
       }
     },
     setup(props,context){
-      console.log(props,context);
-      console.log(Object.entries(props));
-      const name =ref('小四')
-      const age=ref(18)
-      console.log(name,age);
-      return {}
+      console.log(props,context,'xxxx');
+      let {name} = props
+      return {
+        name
+      }
       // let s = ref(1)
       // console.log(s);
       //

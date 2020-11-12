@@ -1,8 +1,5 @@
 <template>
-    <FishIcon>xxxx</FishIcon>
-    <svg class="icon" aria-hidden="true">
-        <use xlink:href="#auto"></use>
-    </svg>
+    <FishIcon name="copy"></FishIcon>
 </template>
 
 <script lang="ts">

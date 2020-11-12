@@ -1,7 +1,8 @@
-import { IconUi } from '../../lib/index';
+import { FishIcon } from '../../lib/index';
+console.log(FishIcon);
 export default {
     name: "IconDemo",
-    component: { IconUi },
+    components: { FishIcon },
     setup(props) {
         console.log(props);
     }
