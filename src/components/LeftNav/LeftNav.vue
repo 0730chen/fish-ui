@@ -11,6 +11,7 @@
         <router-link to="/select">Select组件</router-link>
         <router-link to="/icon">Icon组件</router-link>
         <router-link to="/input">Input组件</router-link>
+        <router-link to="/message">Message组件</router-link>
 
         <router-link to="/" class="logo">
             <svg class="icon">

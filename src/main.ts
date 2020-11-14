@@ -11,6 +11,7 @@ import CheckBoxDemo from "./components/CheckBox/CheckBoxDemo.vue";
 import IconDemo from "./components/IconDemo/IconDemo.vue";
 import SelectDemo from "./components/SelectDemo/SelectDemo.vue";
 import InputDemo from "./components/InputDemo/InputDemo.vue";
+import MessageDemo from "./components/MessageDemo/MessageDemo.vue";
 // import Dialog from "./components/Dialog/DialogDemo1.vue";
 
 const history = createWebHistory()
@@ -25,7 +26,8 @@ const router = createRouter({
         {path:'/checkbox',component: CheckBoxDemo},
         {path:'/icon',component: IconDemo},
         {path:'/select',component: SelectDemo},
-        {path:'/input',component: InputDemo}
+        {path:'/input',component: InputDemo},
+        {path:'/message',component: MessageDemo}
         // {path:'/dialog',component: Dialog}
         ]
 })

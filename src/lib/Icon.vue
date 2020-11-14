@@ -12,6 +12,7 @@
 
 <script lang="ts">
     import {computed,ref} from 'vue'
+    import clipboard from 'clipboard'
   export default {
     name: 'FishIcon',
     props:{

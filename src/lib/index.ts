@@ -15,3 +15,5 @@ export {default as CheckBox} from './Checkbox.vue'
 export {default as Select} from './Select.vue'
 export {default as FishIcon} from './Icon.vue'
 export {default as Input} from './Input.vue'
+
+export {default as Message} from './Message.vue'
