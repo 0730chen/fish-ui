@@ -1,5 +1,10 @@
 <template>
-    <FishIcon name="copy"></FishIcon>
+    <div class="icon-demo">
+        <FishIcon name="copy"></FishIcon>
+        <FishIcon name="code"></FishIcon>
+        <FishIcon name="editor"></FishIcon>
+        <FishIcon name="computer_huaban1"></FishIcon>
+    </div>
 </template>
 
 <script lang="ts">
@@ -16,6 +21,10 @@
 </script>
 
 <style lang="scss" scoped>
-
+.icon-demo{
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+}
 
 </style>
