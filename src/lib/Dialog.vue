@@ -62,6 +62,7 @@
         }
     }
     export const onClickOk = () => {
+      console.log(this)
         if (props.ok?.() !== false) {
             close()
         }
