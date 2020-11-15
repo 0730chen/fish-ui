@@ -27,7 +27,6 @@
 
       function copyName(name){
         console.log('复制名字')
-        alert(name)
         //调用剪切板方法
       }
       return {

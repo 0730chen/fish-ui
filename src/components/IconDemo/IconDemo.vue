@@ -4,6 +4,7 @@
         <FishIcon name="code"></FishIcon>
         <FishIcon name="editor"></FishIcon>
         <FishIcon name="computer_huaban1"></FishIcon>
+        <FishIcon name="eyeclose_huaban1"></FishIcon>
     </div>
 </template>
 
