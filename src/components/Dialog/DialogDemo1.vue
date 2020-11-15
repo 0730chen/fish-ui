@@ -1,7 +1,4 @@
 
-<Demo>
-    常规使用
-</Demo>
 <template>
     <div>
         <Buttons @click="toggle">打开对话框</Buttons>
@@ -22,6 +19,7 @@
     import Demo from "../Demo.vue";
     import {Buttons,Dialog} from "../../lib";
     import {openDialog} from '../../lib/openDialog'
+    import {ref} from 'vue'
 
     export default  {
         name: "DialogDemo1",
@@ -46,6 +44,13 @@
             }
         }
     }
+    // export default {
+    //   name:'dialog',
+    //   components:{
+    //     Buttons,
+    //     Dialog
+    //   }
+    // }
 </script>
 
 <style lang="scss" scoped>

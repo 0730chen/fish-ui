@@ -12,7 +12,8 @@ import IconDemo from "./components/IconDemo/IconDemo.vue";
 import SelectDemo from "./components/SelectDemo/SelectDemo.vue";
 import InputDemo from "./components/InputDemo/InputDemo.vue";
 import MessageDemo from "./components/MessageDemo/MessageDemo.vue";
-// import Dialog from "./components/Dialog/DialogDemo1.vue";
+// import DialogDemo1 from "./components/Dialog/DialogDemo1.vue";
+import Dialog from "./components/Dialog/DialogDemo1.vue";
 
 const history = createWebHistory()
 const router = createRouter({
@@ -27,8 +28,9 @@ const router = createRouter({
         {path:'/icon',component: IconDemo},
         {path:'/select',component: SelectDemo},
         {path:'/input',component: InputDemo},
-        {path:'/message',component: MessageDemo}
-        // {path:'/dialog',component: Dialog}
+        // {path:'/dialog',component: DialogDemo1},
+        {path:'/message',component: MessageDemo},
+        {path:'/dialog',component: Dialog}
         ]
 })
 const app = createApp(App)
