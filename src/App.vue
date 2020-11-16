@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import Layout from './view/Layout/Layout.vue'
-import HelloWorld from "./components/Home.vue";
+import Layout from './components/Layout/Layout.vue'
+import HelloWorld from "./view/Home.vue";
 export default {
   name: 'HomePage',
   components: {

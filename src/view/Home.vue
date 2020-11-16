@@ -3,8 +3,8 @@
         <div class="topnavAndBanner">
             <TopNav></TopNav>
             <div class="banner">
-                <h1>轱辘UI</h1>
-                <h2>一个面向学习者的 UI 框架</h2>
+                <h1>Fish-UI</h1>
+                <h2>Vue3.0学习制作UI组件库</h2>
                 <p class="actions">
                     <a href="https://github.com">GitHub</a>
                     <router-link to="/doc">开始</router-link>
@@ -37,8 +37,8 @@
   //ref接受参数并将其包装在具有value属性的对象中，然后将其用于访问或更改反应变量的值
   //在对象内部包装值似乎是不必要的，但是需要使行为在JavaScript中不同数据类型之间保持统一。那是因为在JavaScript中，原始类型（例如Number或）String是通过值而不是通过引用传递的：
   import {ref, onMounted, watch, toRefs, computed} from 'vue'
-  import TopNav from "./TopNav/TopNav.vue";
-  import {FishIcon} from '../lib/index'
+  import TopNav from "../components/TopNav/TopNav.vue";
+  import {FishIcon} from '../lib'
   // 开始使用Composition API，我们首先需要一个可以实际使用它的地方。在Vue组件中，我们将此位置称为setup。
   //setUp使用的值必须要return出去
   //setuP的第一个参数式props

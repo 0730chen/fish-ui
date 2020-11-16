@@ -1,10 +1,12 @@
 <template>
-    <Input v-model="input" placeholder="请输入内容"></Input>
+    <label>
+        <Input v-model="input" placeholder="请输入内容"></Input>
+    </label>
 </template>
 
 <script lang="ts">
 
-    import {Input} from '../../lib/index'
+    import {Input} from '../../lib'
   export default  {
     name: "InputDemo",
     components: {Input},

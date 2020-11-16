@@ -12,7 +12,7 @@
 
 <script lang="ts">
     import {ref} from 'vue'
-    import {Tag} from "../../lib/index";
+    import {Tag} from "../../lib";
     export default {
         name: "TagDemo",
         components: {

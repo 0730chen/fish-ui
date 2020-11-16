@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-    import {FishIcon} from '../../lib/index'
+    import {FishIcon} from '../../lib'
 
     console.log(FishIcon);
     export default {

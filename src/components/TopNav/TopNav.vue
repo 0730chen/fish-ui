@@ -7,17 +7,16 @@
         <router-link to="/demo">组件</router-link>
         <router-link to="/switch">相关资源</router-link>
         </div>
+
         <router-link to="/" class="logo">
-<!--            <svg class="icon">-->
-<!--                <use xlink:href="#icon-king"></use>-->
-<!--            </svg>-->
-            logo
+            <FishIcon name="KingCrown"></FishIcon>
         </router-link>
     </div>
 </template>
 
 <script lang="ts">
     import {inject, Ref} from "vue"
+    import {FishIcon} from "../../lib/index";
 
     export default {
         name: 'TopNav',
@@ -27,6 +26,9 @@
                 default: false
             }
         },
+      components:{
+          FishIcon
+      },
         setup() {
             const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
             const toggleMenu = () => {
@@ -40,7 +42,3 @@
         },
     }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

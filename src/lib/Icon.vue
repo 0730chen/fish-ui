@@ -47,8 +47,9 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    height: 102px;
-    width: 16.6%;
+    grid-area: icon;
+    width: 64px;
+    height: 64px;
     padding: 0 16px;
     color: #666;
     &-name{

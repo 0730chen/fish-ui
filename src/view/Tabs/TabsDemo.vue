@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-    import {Tab,Tabs} from "../../lib/index"
+    import {Tab,Tabs} from "../../lib"
 
     import Demo from '../Demo.vue'
 
