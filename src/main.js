@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import './index.scss';
 import { createWebHistory, createRouter } from 'vue-router';
-import HelloWorld from './components/HelloWorld.vue';
+import Home from './components/Home.vue';
 import TabsDemo from './components/Tabs/TabsDemo.vue';
 import Demo from "./components/Buttons/Demo.vue";
 import SwitchDemo from "./components/Switch/SwitchDemo.vue";
@@ -18,7 +18,7 @@ const history = createWebHistory();
 const router = createRouter({
     history: history,
     routes: [
-        { path: '/', component: HelloWorld },
+        { path: '/', component: Home },
         { path: '/tabs', component: TabsDemo },
         { path: '/demo', component: Demo },
         { path: '/switch', component: SwitchDemo },

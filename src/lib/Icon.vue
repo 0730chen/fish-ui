@@ -1,11 +1,8 @@
 <template>
-    <div @click="copyName(name)" class="fish-ui-icon" >
+    <div class="fish-ui-icon" >
         <svg class="icon" aria-hidden="true">
             <use :xlink:href='iconName'></use>
         </svg>
-        <div class="fish-ui-icon-name">
-            {{name}}
-        </div>
     </div>
 </template>
 
@@ -22,20 +19,17 @@
       }
     },
     setup(props,context){
-      console.log(props,context,'xxxx');
+      console.log(props,'我是传入的pros');
       let {name} = props
-
-      let iconName = computed((name)=>{
-
+      console.log(name);
+      let iconName = computed(()=>{
+        console.log(name);
         return `#${name}`
       })
-      function copyName(name){
-        console.log('复制名字')
-        //调用剪切板方法
-      }
+      console.log(iconName);
+
       return {
         name,
-        copyName,
         iconName
       }
       // let s = ref(1)
@@ -53,7 +47,6 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    border: 1px solid #F6F6F6;
     height: 102px;
     width: 16.6%;
     padding: 0 16px;

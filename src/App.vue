@@ -1,14 +1,15 @@
 <template>
-  <Layout></Layout>
+  <router-view></router-view>
 </template>
 
 <script>
 import Layout from './view/Layout/Layout.vue'
-
+import HelloWorld from "./components/Home.vue";
 export default {
   name: 'HomePage',
   components: {
-    Layout
+    Layout,
+    HelloWorld,
   }
 }
 </script>
