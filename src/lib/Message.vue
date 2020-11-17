@@ -1,6 +1,6 @@
 <template>
-    <div>
-        消息组件
+    <div class="fish-message">
+
     </div>
 </template>
 
@@ -18,5 +18,10 @@
 </script>
 
 <style lang="scss" scoped>
+    .fish-message{
+        position: fixed;
+        top: 0;
+        left: 0;
 
+    }
 </style>
