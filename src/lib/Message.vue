@@ -1,6 +1,5 @@
 <template>
     <div class="fish-message" v-if="visible">
-        xxxx
         <slot name="content"></slot>
     </div>
 </template>

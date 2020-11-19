@@ -1,16 +1,21 @@
 import { Buttons } from "../../lib";
 import { openMessage } from "../../lib/openMessage";
 import { Message } from "../../lib";
+import { ref } from 'vue';
 export default {
     name: "MessageDemo",
     components: { Buttons, Message },
     setup() {
-        let clickMessage = () => {
+        let x = ref(false);
+        let toggle = () => {
             console.log('hahah ');
-            openMessage('xxxxx');
+            x.value = !x.value;
+            openMessage('我是传入的参数');
+            console.log(x.value);
         };
         return {
-            clickMessage
+            x,
+            toggle
         };
     }
 };

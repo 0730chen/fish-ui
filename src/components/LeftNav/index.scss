@@ -1,21 +1,50 @@
-.left-nav{
-  display: flex;
-  flex-direction: column;
-  width: 240px;
-  transition: padding-top .3s;
-  > a{
-    display: block;
-    height: 40px;
-    color: #444;
-    line-height: 40px;
-    font-size: 14px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    font-weight: 400;
+@media screen and (min-device-width: 768px) {
+  .left-nav{
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    transition: padding-top .3s;
+    > a{
+      display: block;
+      height: 40px;
+      color: #444;
+      line-height: 40px;
+      font-size: 14px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-decoration: none;
+      font-weight: 400;
+    }
+    >a:hover{
+      color:  #409eff;;
+    }
   }
-  >a:hover{
-    color:  #409eff;;
+}
+
+@media screen and(max-device-width: 768px) {
+  .left-nav{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    width: 240px;
+    padding: 80px 16px;
+    > a{
+      display: block;
+      height: 40px;
+      color: #444;
+      line-height: 40px;
+      font-size: 14px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-decoration: none;
+      font-weight: 400;
+    }
+    >a:hover{
+      color:  #409eff;;
+    }
   }
 }

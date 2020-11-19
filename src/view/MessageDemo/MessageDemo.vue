@@ -21,7 +21,7 @@
       let toggle = () => {
         console.log('hahah ')
         x.value = !x.value
-        openMessage('xxxxx')
+        openMessage('我是传入的参数')
         console.log(x.value);
       }
       return {

@@ -1,56 +1,90 @@
 $color: #007974;
-.topnav {
-  height: 80px;
-  top: 0;
-  left: 0;
-  width: 1140px;
-  padding: 0;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  line-height: 80px;
-  z-index: 1;
-  position: relative;
-  > .link-wrap{
+
+@media screen and(min-device-width: 768px) {
+  .topnav {
+    height: 80px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    > a{
-      padding-right: 32px;
+    line-height: 80px;
+    z-index: 1;
+    position: relative;
+
+    > .link-wrap {
+      display: flex;
+      justify-content: space-between;
+
+      > a {
+        padding-right: 32px;
+      }
     }
-  }
-  >.logo {
-    >svg {
+
+    > .logo {
+      > svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    > .menu {
+      display: flex;
+      white-space: nowrap;
+      flex-wrap: nowrap;
+
+      > li {
+        margin: 0 1em;
+      }
+    }
+
+    > .toggleAside {
       width: 32px;
       height: 32px;
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+      background: fade-out(black, 0.9);
     }
   }
-  >.menu {
+
+}
+
+@media screen and(max-device-width: 768px) {
+  .topnav{
+    height: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    line-height: 80px;
     display: flex;
-    white-space: nowrap;
-    flex-wrap: nowrap;
-    >li {
-      margin: 0 1em;
+    flex-direction: row-reverse;
+    justify-content: start;
+    text-align: left;
+    z-index: 1;
+    position: relative;
+    > .link-wrap{
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      > a {
+        width: 100%;
+        text-align: center;
+      }
     }
-  }
-  >.toggleAside {
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
-    background: fade-out(black, 0.9);
-  }
-  @media (max-width: 500px) {
-    >.menu {
+    > .menu {
       display: none;
     }
-    >.logo {
+    > .logo {
       margin: 0 auto;
     }
-    >.toggleAside {
+    > .toggleAside {
       display: inline-block;
     }
   }

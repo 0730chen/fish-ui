@@ -7,10 +7,7 @@
         <router-link to="/demo">组件</router-link>
         <router-link to="/switch">相关资源</router-link>
         </div>
-
-        <router-link to="/" class="logo">
             <FishIcon name="KingCrown"></FishIcon>
-        </router-link>
     </div>
 </template>
 

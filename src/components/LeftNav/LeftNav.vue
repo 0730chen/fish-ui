@@ -1,5 +1,6 @@
 <template>
     <div class="left-nav">
+        <router-link to="/intro">快速上手</router-link>
         <router-link to="/tabs">Tabs组件</router-link>
         <router-link to="/demo">Demo组件</router-link>
         <router-link to="/switch">Switch组件</router-link>
