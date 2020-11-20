@@ -7,7 +7,7 @@
         <router-link to="/demo">组件</router-link>
         <router-link to="/switch">相关资源</router-link>
         </div>
-            <FishIcon name="KingCrown"></FishIcon>
+            <FishIcon name="KingCrown" @click="toggleMenu"></FishIcon>
     </div>
 </template>
 
@@ -28,8 +28,10 @@
       },
         setup() {
             const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
+            console.log(menuVisible.value)
             const toggleMenu = () => {
-                if(menuVisible){
+              console.log(menuVisible.value);
+              if(menuVisible){
                     menuVisible.value = !menuVisible.value;
                 }
             };

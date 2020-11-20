@@ -2,7 +2,7 @@
     <div class="container-warp">
         <TopNav></TopNav>
         <div class="layout-warp">
-            <LeftNav></LeftNav>
+            <LeftNav v-if="menuVisible"></LeftNav>
             <router-view></router-view>
         </div>
     </div>
@@ -13,8 +13,15 @@
   import TopNav from "../TopNav/TopNav.vue";
   import LeftNav from "../LeftNav/LeftNav.vue";
 
+  import {inject} from 'vue'
   export default {
     name: 'Layout',
     components: {LeftNav, TopNav},
+    setup(){
+      const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
+
+      console.log(menuVisible.value);
+      return {menuVisible}
+    }
   }
 </script>
