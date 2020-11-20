@@ -43,6 +43,14 @@
         }
       })
 
+      document.addEventListener('click',()=> {
+        this.$nextTick(() => {
+          if (menuVisible.value && tree.value) {
+            tree.value.style.marginLeft = '-200px'
+          }
+        })
+      })
+
       return{mobileStyle,menuVisible,tree}
     }
   }
