@@ -48,14 +48,17 @@
     flex-direction:column;
     align-items: center;
     grid-area: icon;
-    width: 64px;
-    height: 64px;
-    padding: 0 16px;
     color: #666;
+    margin: auto 0 ;
     &-name{
         color: #666;
-
         margin-bottom: 16px;
     }
+}
+.icon {
+    width: 48px; height: 48px;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
 }
 </style>

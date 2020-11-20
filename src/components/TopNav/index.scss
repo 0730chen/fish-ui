@@ -6,7 +6,6 @@ $color: #007974;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0;
     margin: 0 auto;
     display: flex;
     flex-direction: row-reverse;
@@ -14,6 +13,7 @@ $color: #007974;
     line-height: 80px;
     z-index: 1;
     position: relative;
+    padding: 0 64px;
     background: linear-gradient(145deg, rgb(227, 255, 253) 0%, rgb(183, 233, 230) 100%);
 
     > .link-wrap {
@@ -52,6 +52,9 @@ $color: #007974;
       display: none;
       background: fade-out(black, 0.9);
     }
+    .mobile-menu{
+      display: none;
+    }
   }
 
 }
@@ -87,6 +90,21 @@ $color: #007974;
     }
     > .toggleAside {
       display: inline-block;
+    }
+    .mobile-menu{
+      overflow: hidden;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      >svg{
+        width: 50px !important;
+        height: 50px !important;
+      }
+      >>> .icon{
+        display: none;
+        width: 64px !important;
+        height: 64px !important;
+      }
     }
   }
 }

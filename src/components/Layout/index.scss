@@ -1,4 +1,18 @@
 
+@media screen and (min-device-width: 768px ) {
+
+  .container-warp{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .layout-warp{
+    margin-top: 80px;
+    padding: 0 64px;
+    display: flex;
+  }
+
+}
+
 @media screen and (max-device-width: 768px) {
   .container-warp{
     width:100%;
@@ -8,15 +22,3 @@
   }
 }
 
-@media screen and (min-device-width: 768px ) {
-
-  .container-warp{
-    width: 1140px;
-    margin: 0 auto;
-  }
-  .layout-warp{
-    margin-top: 80px;
-    display: flex;
-  }
-
-}
