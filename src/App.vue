@@ -16,6 +16,9 @@ export default {
     const width = document.documentElement.clientWidth
     const menuVisible = ref(width > 500)
     provide('menuVisible',menuVisible)
+    document.addEventListener('click',()=>{
+      console.log('一个全局事件')
+    })
   }
 
 }
