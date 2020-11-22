@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-  import {ref,inject,computed,onMounted} from 'vue'
+  import {ref,inject,computed,onMounted,nextTick} from 'vue'
   export default {
     name: "LeftNav",
     setup(){
@@ -44,7 +44,7 @@
       })
 
       document.addEventListener('click',()=> {
-        this.$nextTick(() => {
+        nextTick(() => {
           if (menuVisible.value && tree.value) {
             tree.value.style.marginLeft = '-200px'
           }
