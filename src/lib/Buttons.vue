@@ -1,56 +1,59 @@
 <template>
-    <div>
-        <button class="fish-button" :class="classes" :disabled="disabled">
-            <slot/>
-        </button>
-    </div>
+    <button class="fish-button" :class="classes" :disabled="disabled">
+        <slot/>
+    </button>
 </template>
 
 <script lang="ts" setup="props">
-    import {computed} from "vue";
+  import {computed} from "vue";
+//使用attrs绑定事件
 
-    declare const props: {
-        theme?: 'button' | 'text' | 'link';
-        size?: 'normal' | 'big' | 'small';
-        level?: 'normal' | 'main' | 'danger';
-        disabled: boolean;
-        loading: boolean;
-    }
-    export default {
-        name:'Buttons',
-        props: {
-            theme: {
-                type: String,
-                default: "button",
-            },
-            size: {
-                type: String,
-                default: "normal",
-            },
-            level: {
-                type: String,
-                default: "normal",
-            },
-            disabled: {
-                type: Boolean,
-                default: false,
-            },
-            loading: {
-                type: Boolean,
-                default: false
-            }
-        },
+  //props需要先声明才能够去使用，attrs不需要
+  //props不包含事件，attrs包含事件
+  //props声明的东西，attrs就不会包含
+  //props支持的类型多，attrs只有string一种类型
+  declare const props: {
+    theme?: 'button' | 'text' | 'link';
+    size?: 'normal' | 'big' | 'small';
+    level?: 'normal' | 'main' | 'danger';
+    disabled: boolean;
+    loading: boolean;
+  }
+  export default {
+    name: 'Buttons',
+    props: {
+      theme: {
+        type: String,
+        default: "button",
+      },
+      size: {
+        type: String,
+        default: "normal",
+      },
+      level: {
+        type: String,
+        default: "normal",
+      },
+      disabled: {
+        type: Boolean,
+        default: false,
+      },
+      loading: {
+        type: Boolean,
+        default: false
+      }
+    },
+  };
+  const {theme, size, level} = props;
+  //通过计算属性改变该组件的class
+  export const classes = computed(() => {
+    return {
+      [`fish-theme-${theme}`]: theme,
+      [`fish-size-${size}`]: size,
+      [`fish-level-${level}`]: level,
+
     };
-    const {theme, size, level} = props;
-    //通过计算属性改变该组件的class
-    export const classes = computed(() => {
-        return {
-            [`fish-theme-${theme}`]: theme,
-            [`fish-size-${size}`]: size,
-            [`fish-level-${level}`]: level,
-
-        };
-    });
+  });
 </script>
 
 <style lang="scss">

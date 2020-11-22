@@ -6,7 +6,9 @@
     </div>
 </template>
 
+
 <script lang="ts">
+    //事件会传递给
     import {Buttons} from "../../lib";
     export default {
         name:'Demo',
