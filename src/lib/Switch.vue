@@ -10,6 +10,8 @@
     import{ref,SetupContext } from 'vue'
     declare const props:{value:Boolean}
     declare const context:SetupContext
+    //传入的值进行一个监听
+    //context.emit("update:xxxx")
     export default {
         name: "Switch",
         props:{

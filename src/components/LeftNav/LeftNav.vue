@@ -15,43 +15,46 @@
 </template>
 
 <script lang="ts">
-  import {ref,inject,computed,onMounted,nextTick} from 'vue'
+  import {ref, inject, computed, onMounted, nextTick} from 'vue'
+
   export default {
     name: "LeftNav",
-    setup(){
+    setup() {
       const menuVisible = inject<Ref<boolean>>("menuVisible");
       const tree = ref(null)
 
-      onMounted(()=>{
+      onMounted(() => {
         console.log(tree.value.style)
-        if(menuVisible.value) {
+        if (menuVisible.value) {
           tree.value.style.marginLeft = '0px'
-        }else {
+        } else {
           tree.value.style.marginLeft = '-200px'
         }
       })
-      let mobileStyle = computed(()=>{
-        console.log('菜单组件',menuVisible.value);
-        if(menuVisible.value){
-          return{
-            marginLeft:'0px'
+      let mobileStyle = computed(() => {
+        console.log('菜单组件', menuVisible.value);
+        if (menuVisible.value) {
+          return {
+            marginLeft: '0px'
           }
-        }else {
+        } else {
           return {
             marginLeft: '-200px'
           }
         }
       })
-
-      document.addEventListener('click',()=> {
+      const width = document.documentElement.clientWidth
+      document.addEventListener('click', () => {
         nextTick(() => {
           if (menuVisible.value && tree.value) {
-            tree.value.style.marginLeft = '-200px'
+            if (width <= 500) {
+              tree.value.style.marginLeft = '-200px'
+            }
           }
         })
       })
 
-      return{mobileStyle,menuVisible,tree}
+      return {mobileStyle, menuVisible, tree}
     }
   }
 </script>

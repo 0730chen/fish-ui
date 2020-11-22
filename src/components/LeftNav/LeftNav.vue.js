@@ -26,10 +26,13 @@ export default {
                 };
             }
         });
+        const width = document.documentElement.clientWidth;
         document.addEventListener('click', () => {
             nextTick(() => {
                 if (menuVisible.value && tree.value) {
-                    tree.value.style.marginLeft = '-200px';
+                    if (width <= 500) {
+                        tree.value.style.marginLeft = '-200px';
+                    }
                 }
             });
         });
