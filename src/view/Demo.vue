@@ -55,6 +55,7 @@
     .demo {
         border: 1px solid $border-color;
         margin: 16px 0 32px;
+        flex: 1;
         >h2 {
             font-size: 20px;
             padding: 8px 16px;

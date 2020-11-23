@@ -54,7 +54,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     $success:#1ABE96;
     $warn:#BC1A42;
     $info:#38879B;

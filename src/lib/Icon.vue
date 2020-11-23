@@ -42,7 +42,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .fish-ui-icon{
     display: flex;
     flex-direction:column;

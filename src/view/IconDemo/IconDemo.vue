@@ -1,22 +1,20 @@
 <template>
     <div class="icon-demo">
-        <FishIcon name="copy"></FishIcon>
-        <FishIcon name="code"></FishIcon>
-        <FishIcon name="editor"></FishIcon>
-        <FishIcon name="computer_huaban1"></FishIcon>
-        <FishIcon name="eyeclose_huaban1"></FishIcon>
+        <Demo :component="IconDemo1"></Demo>
     </div>
 </template>
 
 <script lang="ts">
-    import {FishIcon} from '../../lib'
-
-    console.log(FishIcon);
+    import Demo from "../Demo.vue";
+    import IconDemo1 from './IconDemo1.vue';
     export default {
     name: "IconDemo",
-    components:{FishIcon},
+    components:{Demo},
     setup(props){
       console.log(props)
+      return {
+        IconDemo1
+      }
     }
   }
 </script>

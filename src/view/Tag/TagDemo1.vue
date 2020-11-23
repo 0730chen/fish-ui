@@ -2,7 +2,7 @@
     常规用法
 </demo>
 <template>
-    <div>
+    <div class="tags-wrap">
         <Tag>标签一</Tag>
         <Tag color="red">标签二</Tag>
         <Tag type="waring">标签三</Tag>
@@ -20,5 +20,9 @@
 </script>
 
 <style lang="scss" scoped>
-
+.tags-wrap{
+    >.fish-ui-tag{
+        margin: 0 16px;
+    }
+}
 </style>

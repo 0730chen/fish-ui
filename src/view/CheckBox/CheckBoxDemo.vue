@@ -1,34 +1,25 @@
 <template>
     <div class="fish-ui-checkbox-doc">
-        <div class="fish-ui-checkbox-demo">
-            <div class="fish-ui-checkbox-demo-example">
-                <CheckBox label="复选" theme="black" color="black"></CheckBox>
-                <CheckBox label="禁用" disabled></CheckBox>
-            </div>
-            <div class="fish-ui-checkbox-demo-code">
-                代码示例
-            </div>
-        </div>
-        <div class="fish-ui-checkbox-demo">
-            <div class="fish-ui-checkbox-demo-example">
-                <CheckBox label="边框选择" border></CheckBox>
-                <CheckBox label="另一种颜色" border></CheckBox>
-                <CheckBox label="大边框" border></CheckBox>
-                <CheckBox label="色彩" border></CheckBox>
-            </div>
-            <div class="fish-ui-checkbox-demo-code">
-                代码实例
-            </div>
-        </div>
+      <Demo :component="CheckBoxDemo1"></Demo>
+        <Demo :component="CheckBoxDemo2"></Demo>
     </div>
 </template>
 
 <script lang="ts">
   import {CheckBox} from "../../lib";
+  import CheckBoxDemo1 from './CheckBoxDemo1.vue';
+  import CheckBoxDemo2 from './CheckBoxDemo2.vue';
+  import Demo from "../Demo.vue";
 
   export default {
     name: "CheckBoxDemo",
-    components: {CheckBox}
+    components: {Demo, CheckBox},
+    setup(){
+      return {
+        CheckBoxDemo1,
+        CheckBoxDemo2
+      }
+    }
   }
 </script>
 

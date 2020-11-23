@@ -1,10 +1,11 @@
 <template>
-    <div>
-        <Buttons @click="toggle">打开消息提示</Buttons>
-    </div>
-    <Message v-model:visible="x">
-        <template v-slot:content>打开消息提示</template>
-    </Message>
+    开发中
+<!--    <div>-->
+<!--        <Buttons @click="toggle">打开消息提示</Buttons>-->
+<!--    </div>-->
+<!--    <Message v-model:visible="x">-->
+<!--        <template v-slot:content>打开消息提示</template>-->
+<!--    </Message>-->
 </template>
 
 <script lang="ts">

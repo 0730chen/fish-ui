@@ -1,7 +1,8 @@
 <template>
-    <label>
-        <Input v-model="input" placeholder="请输入内容"></Input>
-    </label>
+    开发中
+<!--    <label>-->
+<!--        <Input v-model="input" placeholder="请输入内容"></Input>-->
+<!--    </label>-->
 </template>
 
 <script lang="ts">
