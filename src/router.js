@@ -1,7 +1,6 @@
 import { createWebHashHistory, createRouter } from 'vue-router';
 import Home from './view/Home.vue';
 import TabsDemo from './view/Tabs/TabsDemo.vue';
-import Demo from "./view/Buttons/Demo.vue";
 import SwitchDemo from "./view/Switch/SwitchDemo.vue";
 import Tag from "./view/Tag/TagDemo.vue";
 import CheckBoxDemo from "./view/CheckBox/CheckBoxDemo.vue";
@@ -10,7 +9,7 @@ import SelectDemo from "./view/SelectDemo/SelectDemo.vue";
 import InputDemo from "./view/InputDemo/InputDemo.vue";
 import MessageDemo from "./view/MessageDemo/MessageDemo.vue";
 // import DialogDemo1 from "./components/Dialog/DialogDemo1.vue";
-import Dialog from "./view/Dialog/DialogDemo1.vue";
+import Dialog from "./view/Dialog/DialogDemo.vue";
 import Doc from "./view/Doc/Doc.vue";
 import { h } from 'vue';
 import Markdown from './components/Markdown.vue';
@@ -31,7 +30,6 @@ export const router = createRouter({
                 { path: 'get-started', component: md(getStarted) },
                 { path: 'install', component: md(install) },
                 { path: 'tabs', component: TabsDemo },
-                { path: 'demo', component: Demo },
                 { path: 'switch', component: SwitchDemo },
                 { path: 'tag', component: Tag },
                 { path: 'checkbox', component: CheckBoxDemo },

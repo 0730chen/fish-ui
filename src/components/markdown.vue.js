@@ -1,3 +1,13 @@
+class {
+};
+"markdown-body";
+v - html;
+"content" >
+    /article>
+    < /template>
+    < script;
+lang = "ts" >
+;
 export default {
     props: {
         content: {
@@ -5,4 +15,5 @@ export default {
             required: true
         }
     }
-};
+}
+    < /script>;

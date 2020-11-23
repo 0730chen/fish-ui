@@ -1,9 +1,13 @@
 @media screen and (min-device-width: 768px) {
   .left-nav{
-    display: flex;
-    flex-direction: column;
-    width: 240px;
+    //display: flex;
+    //flex-direction: column;
+    display: inline-block;
+    width: 188px;
+    padding-top: 80px;
     transition: padding-top .3s;
+    text-align: center;
+    float: left;
     > a{
       display: block;
       height: 40px;

@@ -5,8 +5,8 @@
             <component :is="component" />
         </div>
         <div class="demo-actions">
-            <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
-            <Button @click="showCode" v-else>查看代码</Button>
+            <Buttons @click="hideCode" v-if="codeVisible">隐藏代码</Buttons>
+            <Buttons @click="showCode" v-else>查看代码</Buttons>
         </div>
         <div class="demo-code" v-if="codeVisible">
             <pre class="language-html" v-html="html"></pre>
@@ -16,43 +16,38 @@
 </template>
 
 <script lang="ts">
-import Button from '../lib/Buttons.vue'
-import 'prismjs'
-import 'prismjs/themes/prism.css'
-
-import {computed,ref} from 'vue'
-
-const  Prism = (window as any).Prism
-
-export default  {
-        name: "Demo",
-        components:{
-            Button
-        },
-        props:{
-            component:Object
-        },
-        setup(props){
-            console.log(props);
-            const html = computed(()=>{
-                return Prism.highlight(props.component._sourceCode,Prism.languages.html,'html')
-            })
-            const codeVisible = ref(false)
-            const showCode = ()=>{
-                codeVisible.value  = true
-            }
-            const hideCode = ()=>{
-                codeVisible.value = false
-            }
-            return {
-                Prism,
-                html,
-                codeVisible,
-                showCode,
-                hideCode
-            }
-        }
+  import {Buttons} from '../lib/index'
+  import 'prismjs';
+  import 'prismjs/themes/prism.css'
+  import {
+    computed,
+    ref
+  } from 'vue';
+  const Prism = (window as any).Prism
+  export default {
+    components: {
+      Buttons
+    },
+    props: {
+      component: Object
+    },
+    setup(props) {
+      console.log(props.component);
+      const html = computed(() => {
+        return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
+      })
+      const showCode = () => codeVisible.value = true
+      const hideCode = () => codeVisible.value = false
+      const codeVisible = ref(false)
+      return {
+        Prism,
+        html,
+        codeVisible,
+        showCode,
+        hideCode
+      }
     }
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -82,5 +77,4 @@ export default  {
             }
         }
     }
-
 </style>

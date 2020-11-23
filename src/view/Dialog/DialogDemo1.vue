@@ -1,4 +1,6 @@
-
+<demo>
+    常规用法
+</demo>
 <template>
     <div>
         <Buttons @click="toggle">打开对话框</Buttons>

@@ -1,15 +1,15 @@
-### 安装下载
+# 安装
 
-打开终端运行
+打开终端运行下列命令：
 
-```shell script
-npm install fish-ui
+```
+npm install gulu-ui-1
 ```
 
 或
 
-```shell script
-yarn add fish-ui
+```
+yarn add gulu-ui-1
 ```
 
-下一节:[开始使用](#/doc/get-started)
+下一节：[开始使用](#/doc/get-started)

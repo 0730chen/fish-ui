@@ -1,31 +1,32 @@
 <template>
     <!--    <Tag>哈哈</Tag>-->
-    <div class="fish-ui-tag tag-demo">
-        <Tag>标签一</Tag>
-        <Tag color="red">标签二</Tag>
-        <Tag type="waring">标签三</Tag>
-        <Tag size="medium">中等标签</Tag>
-        <Tag size="small">小型标签</Tag>
-
-    </div>
+    <h1>Tag 示例</h1>
+    <Demo :component="TagDemo1"></Demo>
 </template>
 
 <script lang="ts">
-    import {ref} from 'vue'
-    import {Tag} from "../../lib";
-    export default {
-        name: "TagDemo",
-        components: {
-            Tag
-        }
+  import {ref} from 'vue'
+  import {Tag} from "../../lib";
+  import Demo from '../Demo.vue';
+  import TagDemo1 from './TagDemo1.vue';
+
+  export default {
+    name: "TagDemo",
+    components: {
+      Tag,
+      Demo
+    },
+    setup() {
+      return {
+        TagDemo1
+      }
     }
+  }
 </script>
 
 <style lang="scss">
     .tag-demo {
-        padding: 80px 24px 24px 24px;
-
-        .fish-ui-tag + .fish-ui-tag{
+        .fish-ui-tag + .fish-ui-tag {
             margin-left: 16px;
         }
     }

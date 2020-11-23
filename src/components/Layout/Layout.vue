@@ -1,8 +1,8 @@
 <template>
     <div class="container-warp">
         <TopNav></TopNav>
+        <LeftNav ref="mobileMenu"></LeftNav>
         <div class="layout-warp">
-            <LeftNav ref="mobileMenu"></LeftNav>
             <router-view></router-view>
         </div>
     </div>
