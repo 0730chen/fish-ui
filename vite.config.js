@@ -1,34 +1,21 @@
-
-const path = require('path');
-module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/Cat-count/'
-    : '/',
-  lintOnSave: false,
-  chainWebpack: config => {
-    const dir = path.resolve(__dirname, 'src/assets/icons');
-
-    config.module
-      .rule('svg-sprite')
-      .test(/\.svg$/)
-      .include.add(dir).end() // 包含 icons 目录
-      .use('svg-sprite-loader-mod').loader('svg-sprite-loader-mod').options({extract: false}).end()
-      .use('svgo-loader').loader('svgo-loader')
-      .tap(options => ({...options, plugins: [{removeAttrs: {attrs: 'fill'}}]})).end()
-    config.plugin('svg-sprite').use(require('svg-sprite-loader-mod/plugin'), [{plainSprite: true}]);
-    config.module.rule('svg').exclude.add(dir) // 其他 svg loader 排除 icons 目录
-
-
-    // config.module
-    //   .rule('svg-sprite')
-    //   .test(/\.(svg)(\?.*)?$/)
-    //   .include.add(dir).end()
-    //   .use('svg-sprite-loader-mod').loader('svg-sprite-loader-mod').options({extract: false}).end()
-    //   .use('svgo-loader').loader('svgo-loader')
-    //   .tap(options => ({...options, plugins: [{removeAttrs: {attrs: 'fill'}}]}))
-    //   .end()
-    // config.plugin('svg-sprite').use(require('svg-sprite-loader-mod/plugin'), [{plainSprite: true}])
-    // config.module.rule('svg').exclude.add(dir)
-
-  },
-}
+import { md } from "./plugins/md";
+import fs from 'fs';
+import { baseParse } from '@vue/compiler-core';
+export default {
+    base: './',
+    assetsDir: 'assets',
+    plugins: [md()],
+    vueCustomBlockTransforms: {
+        demo: (options) => {
+            const { code, path } = options;
+            const file = fs.readFileSync(path).toString();
+            const parsed = baseParse(file).children.find(n => n.tag === 'demo');
+            const title = parsed.children[0].content;
+            const main = file.split(parsed.loc.source).join('').trim();
+            return `export default function (Component) {
+        Component.__sourceCode = ${JSON.stringify(main)}
+        Component.__sourceCodeTitle = ${JSON.stringify(title)}
+      }`.trim();
+        }
+    }
+};

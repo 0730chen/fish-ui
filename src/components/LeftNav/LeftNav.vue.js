@@ -1,4 +1,4 @@
-import { ref, inject, computed, onMounted, nextTick } from 'vue';
+import { ref, inject, computed, onMounted } from 'vue';
 export default {
     name: "LeftNav",
     setup() {
@@ -27,15 +27,15 @@ export default {
             }
         });
         const width = document.documentElement.clientWidth;
-        document.addEventListener('click', () => {
-            nextTick(() => {
-                if (menuVisible.value && tree.value) {
-                    if (width <= 500) {
-                        tree.value.style.marginLeft = '-200px';
-                    }
-                }
-            });
-        });
+        // document.addEventListener('click', () => {
+        //   nextTick(() => {
+        //     if (menuVisible.value && tree.value) {
+        //       if (width <= 500) {
+        //         tree.value.style.marginLeft = '-200px'
+        //       }
+        //     }
+        //   })
+        // })
         return { mobileStyle, menuVisible, tree };
     }
 };
