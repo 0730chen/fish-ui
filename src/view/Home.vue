@@ -7,7 +7,7 @@
                 <h2>Vue3.0学习制作UI组件库</h2>
                 <p class="actions">
                     <a href="https://github.com">GitHub</a>
-                    <router-link to="/doc">开始</router-link>
+                    <router-link to="/doc/intro">开始</router-link>
                 </p>
             </div>
         </div>

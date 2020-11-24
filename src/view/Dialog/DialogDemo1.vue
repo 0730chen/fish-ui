@@ -3,7 +3,7 @@
 </demo>
 <template>
     <div>
-        <Buttons @click="toggle">打开对话框</Buttons>
+        <Button @click="toggle">打开对话框</Button>
         <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
             <template v-slot:content>
                 <strong>hi</strong>
@@ -19,13 +19,13 @@
 <script lang="ts">
 
     import Demo from "../Demo.vue";
-    import {Buttons,Dialog} from "../../lib";
+    import {Button,Dialog} from "../../lib/index";
     import {openDialog} from '../../lib/openDialog'
     import {ref} from 'vue'
 
     export default  {
         name: "DialogDemo1",
-        components:{Demo,Buttons,Dialog},
+        components:{Demo,Button,Dialog},
         setup(){
             const x = ref(false)
             const toggle = () => {
@@ -46,13 +46,6 @@
             }
         }
     }
-    // export default {
-    //   name:'dialog',
-    //   components:{
-    //     Buttons,
-    //     Dialog
-    //   }
-    // }
 </script>
 
 <style lang="scss" scoped>

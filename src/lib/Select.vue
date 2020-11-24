@@ -1,6 +1,8 @@
 <template>
     <div class="fish-ui-select">
-        <input type="text" readonly />
+        <label>
+            <input type="text" readonly />
+        </label>
         <span></span>
     </div>
 </template>

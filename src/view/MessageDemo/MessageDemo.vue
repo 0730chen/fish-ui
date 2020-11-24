@@ -9,14 +9,14 @@
 </template>
 
 <script lang="ts">
-  import {Buttons} from "../../lib";
+  import {Button} from "../../lib/index";
   import {openMessage} from "../../lib/openMessage";
-  import {Message} from "../../lib";
+  import {Message} from "../../lib/index";
   import {ref} from 'vue'
 
   export default {
     name: "MessageDemo",
-    components: {Buttons, Message},
+    components: {Button, Message},
     setup() {
       let x = ref(false)
       let toggle = () => {

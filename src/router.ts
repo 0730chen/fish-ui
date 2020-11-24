@@ -1,3 +1,4 @@
+// @ts-ignore
 import {createWebHashHistory, createRouter} from 'vue-router'
 import Home from './view/Home.vue'
 import TabsDemo from './view/Tabs/TabsDemo.vue'
@@ -20,6 +21,7 @@ import intro from './markdown/intro.md'
 
 import getStarted from './markdown/get-started.md'
 import install from './markdown/install.md'
+import ButtonDemo from "./view/Buttons/ButtonDemo.vue";
 const history = createWebHashHistory();
 
 const md = string => h(Markdown, { content: string, key: string })
@@ -37,6 +39,7 @@ export const router = createRouter({
         {path:'install',component: md(install)},
         {path: 'tabs', component: TabsDemo},
         {path: 'switch', component: SwitchDemo},
+        {path:'button',component: ButtonDemo},
         {path: 'tag', component: Tag},
         {path: 'checkbox', component: CheckBoxDemo},
         {path: 'icon', component: IconDemo},

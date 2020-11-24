@@ -5,8 +5,8 @@
             <component :is="component" />
         </div>
         <div class="demo-actions">
-            <Buttons @click="hideCode" v-if="codeVisible">隐藏代码</Buttons>
-            <Buttons @click="showCode" v-else>查看代码</Buttons>
+            <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
+            <Button @click="showCode" v-else>查看代码</Button>
         </div>
         <div class="demo-code" v-if="codeVisible">
             <pre class="language-html" v-html="html"></pre>
@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-  import {Buttons} from '../lib/index'
+  import {Button} from '../lib/index'
   import 'prismjs';
   import 'prismjs/themes/prism.css'
   import {
@@ -26,7 +26,7 @@
   const Prism = (window as any).Prism
   export default {
     components: {
-      Buttons
+      Button
     },
     props: {
       component: Object

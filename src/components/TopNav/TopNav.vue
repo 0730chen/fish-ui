@@ -3,9 +3,7 @@
     <div class="topnav">
         <div class="link-wrap">
         <router-link to="/">首页</router-link>
-        <router-link to="/tabs">主题</router-link>
-        <router-link to="/demo">组件</router-link>
-        <router-link to="/switch">相关资源</router-link>
+        <a href="https://vue3js.cn/docs/">Vue3文档</a>
         </div>
             <FishIcon name="yu"></FishIcon>
         <FishIcon name="menu1" class="mobile-menu"  @click="toggleMenu"></FishIcon>
